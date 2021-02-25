@@ -41,6 +41,7 @@ public class TestFile {
     }
 
     public static void main(String[] args) throws IOException {
+        long start = System.currentTimeMillis();
         List<List<String>> lines = readFile("F:\\TestForJob\\src\\lng.csv");//new ArrayList<>();
         Set<Group> groups = findGroupe(lines);
         List<Group> lists = new ArrayList<>(groups);
@@ -54,5 +55,7 @@ public class TestFile {
                 writer.write("Group : " + i + ": " + lists.get(i) + "\n");
             }
         }
+        long finish = System.currentTimeMillis();
+        System.out.println((finish-start)/1000);
     }
 }
