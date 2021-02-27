@@ -57,4 +57,9 @@ public class Group {
     public Set<String> getWords() {
         return fields;
     }
+
+    public boolean findcontain(String str){
+
+        return fields.contains(str)?true:false;
+    }
 }

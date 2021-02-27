@@ -17,7 +17,12 @@ public class GroupHandler {
                 if (firstFoundGroup == null) {
                     firstFoundGroup = wordToGroup.get(word);
                     firstFoundGroup.add(line);
-                } else {
+                }
+                else if(firstFoundGroup.findcontain(word))
+                {
+                    continue;
+                }
+                else {
                     Group currentGroup = wordToGroup.get(word);
                     wordsToAdd.addAll(currentGroup.getWords());
                     firstFoundGroup.merge(currentGroup);

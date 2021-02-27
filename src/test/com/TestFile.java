@@ -18,7 +18,7 @@ public class TestFile {
         List<List<String>> lines = Files.readAllLines(Paths.get(filePath)).parallelStream()
                 .map(str -> getLine(str))
                 .filter(list -> list.size() == 3)
-              //  .distinct()
+               .distinct()
                 .collect(Collectors.toList());
         return lines;
     }
