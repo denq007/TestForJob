@@ -18,15 +18,17 @@ public class GroupHandler {
                     firstFoundGroup = wordToGroup.get(word);
                     firstFoundGroup.add(line);
                 }
-                else if(firstFoundGroup.findcontain(word))
+             /*  else if(firstFoundGroup.findcontain(word))
                 {
                     continue;
-                }
+                }*/
                 else {
                     Group currentGroup = wordToGroup.get(word);
-                    wordsToAdd.addAll(currentGroup.getWords());
-                    firstFoundGroup.merge(currentGroup);
-                    groups.remove(currentGroup);
+                    if(currentGroup!=firstFoundGroup) {
+                        wordsToAdd.addAll(currentGroup.getWords());
+                        firstFoundGroup.merge(currentGroup);
+                        groups.remove(currentGroup);
+                    }
                 }
             }
         }
