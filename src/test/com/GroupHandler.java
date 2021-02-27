@@ -18,10 +18,6 @@ public class GroupHandler {
                     firstFoundGroup = wordToGroup.get(word);
                     firstFoundGroup.add(line);
                 }
-             /*  else if(firstFoundGroup.findcontain(word))
-                {
-                    continue;
-                }*/
                 else {
                     Group currentGroup = wordToGroup.get(word);
                     if(currentGroup!=firstFoundGroup) {
